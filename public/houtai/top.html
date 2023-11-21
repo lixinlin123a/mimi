@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		body{margin:0px;padding:0px;}
+		
+			div{background:url(img/top.png);
+			background-repeat:no-repeat;
+			background-size:cover;
+			height:200px;
+			
+			width:100%;
+			}
+			
+			 .p{margin:10px 0px 0px 25px;display:inline-block;
+			font-size: 22px;font-family:"微软雅黑";}
+			a{position:absolute;top:32px;right:50px;}
+		</style>
+	
+	</head>
+	<body>
+		 <div >
+		  <p class="p">商家你好！</p>
+		<!-- 当前用户:${currentUser.userName }用于显示当前用户哦 --> 
+		   <a onClick="logout();"><img src="images/out.gif" alt="安全退出" 
+		   width="100" height="30"/>
+		   </a>
+		 </div>
+	</body>
+	
+    <script language=JavaScript>
+function logout(){
+	if (confirm("您确定要退出吗？"))
+	top.location = "../index.html";/*有top.在框架中才可以跳转哦*/
+	return false;
+}
+</script>
+
+</html>

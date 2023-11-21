@@ -1,0 +1,339 @@
+
+/**********版心容器设置**********/
+.jd_container{
+	width: 100%;
+	/*640 和设计稿大小有关系*/
+	/*psd图 有640px大小的设计稿 750px大小的设计稿*/
+	/*
+     640px早期的标准，现在也用 当初参考 是ipone4(width=320)的，
+     压缩到320  在放到两倍像素  比较清晰
+
+     750px  是现在主流的  参考设备是 ipone6(width=375)
+     当设计稿是750px  设置的宽度最大是750px
+
+	*/
+	max-width: 640px;/*基于设计稿*/
+	min-width: 320px;/*保证网页内容的布局*/
+	margin: 0 auto;
+	height: 1200px;
+
+	
+
+}
+
+.jd_search{
+	position: fixed;/*固定定位 脱离文档流，如果没设置：基于原来的位置,设置就基于浏览器*/
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	/*background: #333;*/
+	z-index: 999;
+}
+
+.jd_search .jd_search_box{
+	width: 100%;
+	height: 40px;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;	
+	background: rgba(216,80,90,0.85);
+	position: relative;
+	
+}
+.jd_search .jd_search_box a{
+	  width: 40px;
+	  height: 40px;
+	  display: block;
+	  /*background: gray;*/
+	  position: absolute;
+     top: 0;
+	
+}
+.jd_search .jd_search_box .icon_login{
+
+	width: 60px;
+	height: 40px;
+	/*background: red;*/
+	left: 0;
+	background:url("../imgjd/jd-logo.png")no-repeat;
+	background-size: 200px 200px;
+	/*原图：400x400*/
+	/*在移动端 精灵图要压缩一为半*/
+	/*定位一小一半*/
+	background-position:-83px -19px ;
+}
+.jd_search .jd_search_box .login{
+	 text-align: center;
+	 line-height: 40px;
+	 color: #fff;
+	 right:0 ;
+}
+
+.jd_search .jd_search_box form{
+	width: 100%;
+	height: 40px;
+	
+
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.jd_search .jd_search_box form .icon_search{
+	position: absolute;
+	width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 45px;
+	
+     /*图片失真解决办法-*/
+
+     
+      /*第一种做法*/
+
+			/*类名是这两种情况的 需要精灵图-可以只设置定位即可*/
+			/*[class^="icon_"],[class*=" icon_"]{
+				 background:url("../imgjd/jd-logo.png")no-repeat;
+				background-size: 200px 200px;
+			}*/
+
+
+      /*第二种种做法*/
+			 /*background:url("../imgjd/jd-logo.png")no-repeat;
+		 
+			background-size: 200px 200px;*/
+			/*原图：400x400*/
+			/*在移动端 精灵图要压缩一为半*/ /*图片失真解决办法*/
+
+
+	/*定位一小一半*/
+	background-position: -58px -108px;/**这里已经在公共样式中设置了，所以只定位即可**/
+	
+}
+.jd_search .jd_search_box form input{
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+	border-radius: 15px;
+	padding-left: 40px;
+}
+
+/******************轮播图******************************/
+
+.js_banner{
+	width: 100%;
+	
+
+    overflow: hidden;
+	position: relative;/*相对自身的位置*/
+}
+.js_banner ul:first-child{
+	width: 1000%;
+	transform: translateX(-10%);/*c3的位移*//*自身看做100%来计算*/
+	/*margin-left: -100%;基于自身*/
+
+}
+.js_banner ul:first-child li{
+	width: 10%;/*基于父容器的宽度来计算*/
+	float: left;
+}
+
+.js_banner ul:first-child li a{
+	width: 100%;
+	display: block;
+}
+.js_banner ul:first-child li a img{
+	width: 100%;
+	display: block;
+}
+
+.js_banner div:last-child{
+	position: absolute;
+
+	bottom: 8px;
+
+
+	left: 50%;
+	margin-left: -59px;
+	width: 118px;
+}
+.js_banner div:last-child span{
+	width: 6px;
+	height: 6px;
+	border: 1px solid red;
+	border-radius: 3px;
+	float: left;
+	margin-left: 10px;
+
+
+}
+.js_banner div:last-child span:first-child{
+	
+	margin-left: 0;
+
+
+}
+.js_banner div:last-child span.now{
+	background: #fff;
+}
+
+
+/****************导航栏*******************/
+.jd_nav{
+  width: 100%;
+
+}
+.jd_nav ul{
+	width: 100%;
+	padding: 0 10px;
+	border-bottom: 1px solid #ccc;
+   padding-bottom:10px ;
+	
+}
+.jd_nav ul li{
+	width: 20%;
+	float: left;
+	
+}
+.jd_nav ul li a{
+	display: block;
+	width: 100%;
+   padding-top: 10px;
+  
+	
+	
+}
+.jd_nav ul li a img{
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	
+
+	
+}
+.jd_nav ul li a span{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 10px;
+	
+	text-align: center;
+}
+/*****************商品秒杀****************/
+
+.jd_product {
+	width: 100%;
+}
+
+.jd_proBox {
+	width: 100%;
+}
+.jd_tit{
+ width: 100%;
+}
+
+.jd_tit .skl p,span{
+	float: left;
+
+	}
+
+.jd_tit .skl span{
+	background: #010101;
+    padding-left: 4px;
+    width: 16px;
+    height: 23px;
+    margin: 0 1px;
+    color: #fff;
+}
+
+.jd_tit .skl span:nth-child(4){
+	background: #ccc;
+
+}
+.jd_tit .skl span:nth-child(7){
+	background: #ccc;
+
+}
+
+.jd_tit .sk{
+	float: right;
+	
+}
+
+
+
+
+.jd_proBox ul li{
+	float: left;
+	width: 33%;
+	border:1px solid #ccc;
+
+}
+
+.jd_proBox ul li a{
+	width: 100%;
+	display: block;
+    margin: 0 auto;
+   
+	
+}
+.jd_proBox ul li a img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	
+}
+.jd_proBox ul li p{
+	width: 100%;
+
+	 border-bottom:1px solid #ccc;
+	 text-align: center;
+
+}
+/*****************精装****************/
+
+
+
+/*****************foot****************/
+.foot{
+	width: 100%;
+	
+   position: fixed;
+   left: 0; 
+   bottom: 0;
+  
+   
+}
+.foot div{
+	max-width: 640px;
+	margin: 0 auto;
+	min-width: 320px;
+	 background: #ccc;
+}
+
+
+.foot div ul{
+	width: 100%;
+
+}
+.foot ul li{
+	width: 20%;
+	float: left;
+}
+.foot ul li a{
+	display: block;
+	width: 100%;
+	
+	margin: 0 auto;
+	 /*border: 1px solid red;*/
+
+}
+.foot ul li a img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	
+	
+}
+	

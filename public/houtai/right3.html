@@ -1,0 +1,100 @@
+
+<head>
+<link href="images/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/fy.css" rel="stylesheet" type="text/css" />
+<title>后台管理</title>
+<style>
+  table,table tr td { color:#000; font-size:13px; font-family:"宋体";}
+  a{color:#000;text-decoration:none; font-size:15px;}
+  a:hover{color:#F60;}
+</style>
+</head>
+<body>
+<table id="table" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    
+      <tr>
+        <td height="31"><div class="titlebt">会员管理</div></td>
+      </tr>
+    </table></td>
+    
+  </tr>
+  <tr>
+    <td valign="middle" background="images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9">
+<table width="98%"cellspacing="1" cellpadding="1" bgcolor="#EFEFEF"  style="margin-left:1%; margin-top:15px;" align="center">
+<tr>
+  <td width="5%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">商品id</td>
+  <td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">所属企业</td>
+  <td width="20%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">商品名称</td>
+  <td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">市场价</td>
+  <td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">网上价</td>
+  <td width="5%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">库存数量</td>
+  <td width="5%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">购买数</td>
+  <td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">发布时间</td>
+  <td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">是否锁定</td>
+  <td width="15%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">修改</td></tr>
+  <tr bgcolor='#FFFFFF' align='center'><td>4</td><td>福龙</td><td><a href='shop.php?uid=21&goods_id=4'>福龙</a></td><td>100.00</td><td>80.00</td><td>50</td><td>0</td>
+			<td>2015-04-22</td><td><a href='#X' id='4' onclick='lock_goods(this.id)'>未锁定</a></td><td><a href='#X' id='4' onclick='del_goods(this.id)'>删除</a> | <a href='update_goods.php?goods_id=4'>修改</a></td>
+			</tr><tr bgcolor='#FFFFFF' align='center'><td>3</td><td>0</td><td><a href='shop.php?uid=5&goods_id=3'>沈师傅1酱香鸡蛋干100g*10袋</a></td><td>23.00</td><td>18.90</td><td>20</td><td>0</td>
+			<td>2015-04-09</td><td><a href='#X' id='3' onclick='lock_goods(this.id)'>未锁定</a></td><td><a href='#X' id='3' onclick='del_goods(this.id)'>删除</a> | <a href='update_goods.php?goods_id=3'>修改</a></td>
+			</tr><tr bgcolor='#FFFFFF' align='center'><td>2</td><td>依恋</td><td><a href='shop.php?uid=4&goods_id=2'>沈师傅酱香鸡蛋干100g*10袋</a></td><td>23.00</td><td>19.90</td><td>20</td><td>0</td>
+			<td>2015-04-09</td><td><a href='#X' id='2' onclick='lock_goods(this.id)'>未锁定</a></td><td><a href='#X' id='2' onclick='del_goods(this.id)'>删除</a> | <a href='update_goods.php?goods_id=2'>修改</a></td>
+			</tr><tr bgcolor='#FFFFFF' align='center'><td>1</td><td>依恋</td><td><a href='shop.php?uid=4&goods_id=1'>土耳其进口 咔咔莎</a></td><td>39.00</td><td>19.90</td><td>21</td><td>0</td>
+			<td>2015-04-07</td><td><a href='#X' id='1' onclick='lock_goods(this.id)'>未锁定</a></td><td><a href='#X' id='1' onclick='del_goods(this.id)'>删除</a> | <a href='update_goods.php?goods_id=1'>修改</a></td>
+			</tr>  <tr>
+</table><div class='center_right_box_row_a'><div class='scott'><span class='disabled'>1-4/4 记录</span><span class='disabled'>1/1 页</span></div></div><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="51%" class="left_txt"> 服务邮箱：avast@qq.com<br>
+          官方网站：http://</td>
+        <td width="7%">&nbsp;</td>
+        <td width="40%">&nbsp;</td>
+      </tr>
+  </table></td>
+    <td background="images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
+</body>
+</html>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+	function lock_goods(id)
+	{ 
+			$.post("ajax/ajax.php?act=lock_goods",{id:id},function(date){
+				if(date==1)
+				{
+					window.location.href="goods_manager.php";
+					return true;
+				}
+				else
+				{
+					alert("修改失败");
+					return false;
+				}
+			});
+	}
+	function del_goods(id)
+	{
+			if(window.confirm("你确定要删除本条信息么?"))
+			{
+			$.post("ajax/ajax.php?act=del_goods",{id:id},function(date){
+				if(date==1)
+				{
+					window.location.href="goods_manager.php";
+					return true;
+				}
+				else
+				{
+					alert("删除失败！");
+					return false;
+				}
+			});
+			}
+	}
+</script>

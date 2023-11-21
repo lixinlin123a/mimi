@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+<framest rows="30%,*">
+	 <frame src="top.html" name="topFrame" style="background:red;"/>
+	 <framest cols="30%,70%">
+	 	   <frame src="left.html" name="leftFrame"/>
+	 	   <frame src="right.html" name="rightFrame"/>
+	 </framest>
+		  
+		
+	
+	<noframes>
+	<body>
+		此浏览器不支持框架集
+	</body>
+	</noframes>
+</framest>
+</html>

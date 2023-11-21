@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<link href="images/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/fy.css" rel="stylesheet" type="text/css" />
+<title>后台管理</title>
+<style>
+table,table tr td { color:#000; font-size:13px; font-family:"宋体";}
+a{color:#000;text-decoration:none; font-size:15px;}
+order,table tr a:link {font-size:14px;} a:hover {color:#F60;}
+</style>
+</head>
+<body>
+<table id="table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="17" valign="top" background="images/mail_leftbg.gif"></td>
+<td valign="top" background="images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+<tr>
+<td height="31"><div class="titlebt">会员管理</div></td>
+</tr>
+</table></td>
+<td width="16" valign="top" background="images/mail_rightbg.gif"></td>
+</tr>
+<tr>
+<td valign="middle" background="images/mail_leftbg.gif">&nbsp;</td>
+<td valign="top" bgcolor="#F7F8F9">
+<table width="98%"cellspacing="1" cellpadding="1" id="order" bgcolor="#EFEFEF" style="margin-left:1%; margin-top:15px;" align="center">
+<tr>
+<td width="15%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">订单号</td>
+<td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">支付方式</td>
+<td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">订单地址</td>
+<td width="5%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">订单金额</td>
+<td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">收件人姓名</td>
+<td width="15%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">收件人电话</td>
+<td width="15%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">订单时间</td>
+
+<td width="15%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">修改</td></tr>
+<td width="10%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;">订单地址</td>
+
+<tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042238000' target='_black'>2015042238000</a></td><td>支付宝支付</td><td>黔南师院本部</td><td>19.90</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='14' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042238000' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042238000' target='_black'>2015042238000</a></td><td>支付宝支付</td><td>大十字</td><td>19.90</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='13' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042238000' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042222375' target='_black'>2015042222375</a></td><td>货到付款</td><td>小围在</td><td>39.80</td><td>王伟2</td><td>18317829123</td><td>2015-04-22</td><td><a href='#X' id='12' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042222375' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042222375' target='_black'>2015042222375</a></td><td>货到付款</td><td><a href='#X' id='11' onclick='update_status0(this.id)'><span class='red'>西三公园</span></a></td><td>39.80</td><td>王伟2</td><td>18317829123</td><td>2015-04-22</td><td><a href='#X' id='11' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042222375' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042281750' target='_black'>2015042281750</a></td><td>支付宝支付</td><td>彩虹桥</td><td>19.90</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='10' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042281750' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042203625' target='_black'>2015042203625</a></td><td>货到付款</td><td><a href='#X' id='9' onclick='update_status0(this.id)'><span class='red'>七星城开发区</span></a></td><td>39.80</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='9' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042203625' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042203625' target='_black'>2015042203625</a></td><td>货到付款</td><td><a href='#X' id='8' onclick='update_status0(this.id)'><span class='red'>火车站</span></a></td><td>19.90</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='8' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042203625' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042264562' target='_black'>2015042264562</a></td><td>支付宝支付</td><td>客运总站</td><td>80.00</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='7' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042264562' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015042264562' target='_black'>2015042264562</a></td><td>支付宝支付</td><td>173</td><td>160.00</td><td></td><td></td><td>2015-04-22</td><td><a href='#X' id='6' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015042264562' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015041693750' target='_black'>2015041693750</a></td><td>货到付款</td><td><a href='#X' id='5' onclick='update_status0(this.id)'><span class='red'>体育馆</span></a></td><td>19.90</td><td>张海风</td><td>18317829823</td><td>2015-04-16</td><td><a href='#X' id='5' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015041693750' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015041693750' target='_black'>2015041693750</a></td><td>货到付款</td><td>112</td><td>19.90</td><td>张海风</td><td>18317829823</td><td>2015-04-16</td><td><a href='#X' id='4' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015041693750' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015041693750' target='_black'>2015041693750</a></td><td>货到付款</td><td><a href='#X' id='3' onclick='update_status0(this.id)'><span class='red'>桥梁厂</span></a></td><td>19.90</td><td>张海风</td><td>18317829823</td><td>2015-04-16</td><td><a href='#X' id='3' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015041693750' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015041629687' target='_black'>2015041629687</a></td><td>货到付款</td><td><a href='#X' id='2' onclick='update_status0(this.id)'><span class='red'>西苑</span></a></td><td>0.00</td><td>张海风</td><td>18317829823</td><td>2015-04-16</td><td><a href='#X' id='2' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015041629687' target='_black'>查看</a></td>
+</tr><tr bgcolor='#FFFFFF' align='center'>
+<td><a href='../order_info.php?order_sn=2015041543750' target='_black'>2015041543750</a></td><td>货到付款</td><td><a href='#X' id='1' onclick='update_status0(this.id)'><span class='red'>老火车站</span></a></td><td>79.60</td><td>张海风</td><td>18317829823</td><td>2015-04-15</td><td><a href='#X' id='1' onclick='del_order(this.id)'>删除</a> | <a href='../order_info.php?order_sn=2015041543750' target='_black'>查看</a></td>
+</tr> <tr>
+</table><div class='center_right_box_row_a'><div class='scott'><span class='disabled'>1-7/7 记录</span><span class='disabled'>1/1 页</span></div></div><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td width="2%">&nbsp;</td>
+<td width="51%" class="left_txt"> 服务邮箱：avast@qq.com<br>
+
+<td width="7%">&nbsp;</td>
+<td width="40%">&nbsp;</td>
+</tr>
+</table></td>
+<td background="images/mail_rightbg.gif">&nbsp;</td>
+</tr>
+<tr>
+<td valign="bottom" background="images/mail_leftbg.gif"></td>
+<td background="images/buttom_bgs.gif"></td>
+<td valign="bottom" background="images/mail_rightbg.gif"></td>
+</tr>
+</table>
+</body>
+</html>
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+function del_order(id)
+{
+if(window.confirm("你确定要删除本条信息么?"))
+{
+$.post("ajax/ajax.php?act=del_order",{id:id},function(date){
+if(date==1)
+{
+window.location.href="order_manager.php";
+return true;
+}
+else
+{
+alert("删除失败！");
+return false;
+}
+});
+}
+}
+function update_status0(id)
+{
+$.post("Ajax/ajax.php?act=update_status0",{id:id},function(date){
+if(date==1)
+{
+window.location.href="order_manager.php";
+return true;
+}
+else
+{
+alert("修改失败！");
+return false;
+}
+});
+}
+function update_status01(id)
+{
+$.post("Ajax/ajax.php?act=update_status01",{id:id},function(date){
+if(date==1)
+{
+window.location.href="order_manager.php";
+return true;
+}
+else
+{
+alert("修改失败！");
+return false;
+}
+});
+}
+function update_status1(id)
+{
+$.post("Ajax/ajax.php?act=update_status1",{id:id},function(date){
+if(date==1)
+{
+window.location.href="order_manager.php";
+return true;
+}
+else
+{
+alert("修改失败！");
+return false;
+}
+});
+}
+</script>
+</html>

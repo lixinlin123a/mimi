@@ -1,0 +1,73 @@
+/**rest css 重置样式-要重新设置的样式**/
+*,
+::before,
+::after{
+	/*选中所有的元素和伪元素*/
+	margin: 0;
+	padding: 0;
+	/*针对移动端的设置-从边框开始计算*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;/*主流浏览器兼容*/
+
+	 /*点击高亮效果清除*/
+	-webkit-tap-highlight-color:transpare ;/*点击时背景是透明的*/
+}
+body{
+	font-size: 14px;
+	color: #333;
+	font-family: "Microsoft Yahei" ,sans-serif;;/*微软雅黑*/
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;/*下划线*/
+	color: #333;
+}
+input,textarea{
+	outline: none;/*轮廓*/
+	border: none;/*边框*/
+	resize: none;/*尺寸*/
+
+	/*清除移动端输入框默认样式*/
+	-webkit-appearance: none;
+}
+/*  去掉图片低测默认的3像素空白缝隙*/
+img,table{
+    border-collapse: collapse;      /*合并外边线*/
+}
+
+
+/**************common css 公共样式-经常用到的样式***********************/
+.l_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;/*看不见*/
+	clear: both;
+}
+
+/*移动端经常用到的*/
+.ml10{
+	margin-left: 10px;
+}
+.mr10{
+  margin-right: 10px;
+}
+/**精灵图压缩为原来的一半**/
+
+/*class="icon_xxx*/
+/*class="jk icon.xxx*/
+/*类名是这两种情况的 需要精灵图-可以只设置定位即可*/
+[class^="icon_"],[class*=" icon_"]{
+	 background:url("../imgjd/jd-logo.png")no-repeat;
+	background-size: 200px 200px;
+}

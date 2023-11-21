@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="美食">
+  <meta name="Keywords" content="美食，可口，美味">
+  <meta name="Description" content="美食是人类最新的发明">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
+  
+  <title>美食订餐</title>
+  
+  <!--手机的跳转-->
+  <script type="text/javascript">
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+var browser = navigator.userAgent.toLowerCase(); 
+var isMobile = false; 
+for (var i=0; i<mobileAgent.length; i++){ if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true; 
+//alert(mobileAgent[i]); 
+location.href = 'http://192.168.1.102:8080/dj/jj.html';
+break; } } 
+</script>
+
+   <link  rel="stylesheet" type="text/css" href="Swiper/swiper.min.css">
+  <style type="text/css">
+     *{margin:0px;padding:0px;}
+	 .margAuto{width:1050px;margin:auto;}
+     li{list-style:none;}
+	 a{text-decoration:none;}
+     .clearfix:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+
+     .box{height:1770px;background:url("imgms/bigbg.png");}
+
+	/*head start*/
+      .head{}
+	  .top{font-size:14px;}
+	  .top .topf{float:left;margin-left:74px;font-size}
+	  .topf span{margin-right:10px;}
+	  .top .topr{float:right;margin-right:78px;}
+
+      .top2{height:145px;}
+	  .top2 h1{display:inline-block ;margin-right:115px;}
+	   .top2 .img1{margin-left:-73px;border-radius:15px 15px;}
+	   .top2 .img2{margin-left:48px;border-radius:15px 15px;}
+
+	   .log{background:#FF00FF;height:34px;}
+	   .log .logtext{height:39px;margin-top:-1px;}
+	   .logtext li{float:left;text-align:center;width:131px;height:40px;}
+       .logtext li a{color:#fff;margin-top:7px;display:inline-block ;}
+	   .logtext li:hover{background:#00FF00;}
+	/*head end*/  
+
+
+	/*conent start 系列分类栏  stsrt*/
+	     .conent{margin-top:5px;}
+		 .conent .conent1{height:350px;}
+	     .conent1 .conleft{float:left;width:237px;height:100%;background:url("imgms/conleft.png");}
+         .conleft h3{color:#fff;font-size:24px;font-style:"宋体";text-indent:20px;}
+		  .conleft ul li{
+		   font:14px/32px "Microsoft yahei";
+			padding-left:24px;
+			border-top:1px solid #fff;
+			border-bottom:1px solid #bee6ff;
+			margin:0 20px 0 7px;
+            
+			}
+			/*伪类选择器   是自身父元素的第一个子元素*/
+			.conleft ul li:first-child{
+			border:none;
+		 }
+		.conleft ul li a{color:#1679dd;}
+		.conleft ul li i{
+	border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-style: normal;
+    height: 17px;
+    line-height: 12px;
+    margin-top: 10px;
+    text-align: center;
+    width: 28px;
+	background:#1E90FF;
+
+		}
+		 .conent1 .conright{float:right;width:798px;}
+		 /*.conent1 .conright{float:right;width:798px;height:100%;}*/
+		 
+	/*右边移动图片开始*/
+		         .swiper-container{
+		   width:798px;
+		   height:350px;
+		   
+		 }
+
+	   .swiper-slide{
+	    background:red;
+		line-height:350px;
+		text-align:center;
+		font-size:25px;
+
+	   }
+	   .swiper-slide:nth-child(2){
+	     background:pink;
+	   }
+	    .swiper-slide:nth-child(3){
+	     background:lime;
+	   }
+	   .swiper-slide:nth-child(4){
+	     background:yellow;
+	   }
+	    .swiper-slide:nth-child(5){
+	     background:silver;
+	   }
+	   .swiper-slide:nth-child(6){
+	     background:#ccf;
+	   }
+/*右边移动图片end*/
+
+		 /*美食图  conent2 stsrt*/
+		 .conent .conent2{height:115px;background:#CD5C5C;margin-top:15px;}
+
+
+       /*美食大全  conent3 stsrt*/
+		 .conent .conent3{height:380px;margin-top:15px;}
+
+      /* conleft3 stsrt*/
+		 .conent3 .conleft3{float:left;width:250px;height:100%;}
+		 
+		 .conleft3 h3{width:252px;height:30px;color:#fff;background:#00FFFF;text-indent:24px;}
+		 .conleft3 ul{background:#F0FFFF;width:250px;height:350px;border:2px solid #8ad0ee;}
+		  .conleft3 ul li{
+			border-bottom:1px dotted #ccc;
+			font-size: 16px;
+            height: 19px;
+            line-height: 43px;
+            margin: 0 12px;
+			}
+	.conleft3 ul li:hover{cursor:pointer;}
+
+      .conleft3 ul li i{
+	   display:inline-block;
+	   width:18px;height:14px;
+	   border-radius:5px;
+	  background:#a7a7a7;
+	   margin:0 10px;
+	   text-align:center;
+	   font:12px/14px "宋体";
+	   font-style:normal;
+	   color:#fff;
+	   }   
+    #yel{
+  background:#ff7b00;
+   }
+
+/*right3 stsrt*/
+    .conright3{float:right;width:780px;height:100%;background:#FFFFFF;position:relative;}
+   .conright3 h3{position:absolute;top:0px;left:0px;
+   width:28px;height:120px;background:#87CEEB;
+   text-align:center;color:#fff;border-radius:0px 0px 30px 0px;padding-top:10px;}
+   .conright3 ul li{
+    float: left;
+    height: 134px;
+    width: 190px;
+   }
+  .conright3 ul li .png1{
+  border: 1px solid #E6E6FA;
+    display: block;
+    height: 103px;
+    margin: 15px 2px -16px 29px;
+    padding: 22px 2px 3px 4px;
+    width: 136px;} 
+ .conright3 ul li .png2{
+  border: 1px solid #E6E6FA;
+    display: block;
+    height: 103px;
+    margin: 59px 2px -16px 29px;
+    padding: 22px 2px 3px 4px;
+    width: 136px;}
+	.conright3 ul li a{display:block;text-align:center;color:#00FF00;
+}
+	.tubleft{
+	height: 45px;
+    left: 0;
+    position: absolute;
+    top: 152px;
+    width: 21px;background:url("imgms/left.png");}
+
+	.tubright{
+	height: 45px;
+    right: 0;
+    position: absolute;
+    top: 152px;
+    width: 22px;background:url("imgms/right.png");}
+	.conright3 ul li a span{
+display:inline-block;
+font-size:16px;
+color:#FFA500;
+font-style:normal;
+}
+  
+/*conent4 start*/
+ .conent .conent4{height:150px;background:red;margin-top:15px;}
+
+ /*特价产品栏 start*/
+ .conent .conent5{height:300px;margin-top:15px;}
+ .conent5 .con5left{width:280px;height:100%;float:left;}
+.con5left .con5left1{width:278px;height:280px;border:1px solid #00ccff;}
+.con5left1 p{height:26px;}
+.con5left1 p span{margin-left:25px;float:left;width:54px;height:21px;display:block;margin-top:5px;border-radius:7px 7px 0px 0px;}
+.con5left1 p span:hover{background:#fff;cursor:pointer;}
+.con5left1 dl{float:left;margin-top:18px;margin-left:27px;}
+
+/*要闻栏 stat*/
+.conent5 .con5con{width:389px;height:100%;float:left;margin-left:15px;border:1px solid #00ccff;}
+.con5con h3{background:#C6E2FF;color:#00ccff;width:389px;height:25px;font-size:16px;font-family:"宋体";text-indent:24px;}
+.con5con ul{padding:18px 0 0 21px;}
+.con5con ul li{font:14px/25px "Microsoft yahei";margin:4px 2px 3px 4px;}
+.con5con ul li:before{
+			content:"";
+			display:inline-block;
+			width:4px;
+			height:9px;
+			margin-right:14px;
+			background:url("imgms/news.jpg");}
+
+			
+/*地理搜索 stat*/
+
+    .con5right{width:350px;height:100%;float:right;}
+	.con5right h3{width:85px;height:26px;background:#00FFFF;border-radius:5px 5px 0px 0px;font-family:"宋体";}
+	.con5right img{padding:24px 40px;border:1px solid  #00ccff;width:268px;height:225px;}
+/*conent end*/
+
+
+/*footer start*/
+         .foot1{width:100%;background:#2a98da;height:175px;margin-top:25px;}
+
+		 .foot1left{width:750px;height:150px;border-right:1px solid #fff;float:left;margin-top:10px;}
+          .foot1left ul{float:left;margin:7px 29px 3px 29px;}
+		  .foot1left ul li{margin:14px 2px 0px -7px;font-size:16px;color:#fff;}
+		  .foot1left ul .xx{font-weight:bolder;}
+
+		 .foot1right{width:280px;height:170px;float:right;}
+		 .foot1right dl{margin:30px 5px 5px 72px;}
+		  .foot1right p{margin-left:68px;}
+
+
+		  .foot2{height:114px;width:610px;margin:auto;}
+		   .foot2 p{margin-top:15px;}
+		   .foot2 a span{display:inline-block;
+			width:110px;}
+		   
+
+
+ 
+		 
+  </style>
+ </head>
+ <body>
+ <div class="box">
+     <!--head start-->
+      <div class="head">
+	        <div class="top margAuto clearfix" style="height:20px;">
+			     <div class="topf">
+				 <span>你好!欢迎光临美食订餐商城!</span>
+						<a href="denglu/dl1.html">商家登录</a>
+						<a href="denglu/dl.html">用户登录</a>
+						<a href="denglu/dl.html">注册</a>
+				 </div>
+				<div class="topr">
+				     <a href="">购物车</a>|
+					 <a href="">关于我们</a>|
+					 <a href="">收藏加入</a>|
+					 <a href="">咨询我们</a>
+				</div>
+				 
+			</div>
+			<div class="top2 margAuto">
+			    <h1><img src="imgms/log1.png" alt="美食生活"/></h1>
+				<img  class="img1" src="imgms/log2.png" alt="订餐美味"/>
+				<img  class="img2" src="imgms/log3.png" alt="美食新品" />
+			</div>
+			<div class="log" style="height:40px;">
+			   <ul class="margAuto logtext  clearfix">
+			        <li><a href="">网站首页</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">新闻动态</a></li>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">产品分类</a></li>
+					<li><a href="">新手必看</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">活动及培训</a></li>
+
+			   </ul>
+			</div>
+	  </div>
+<!--head end-->
+
+<!--conent start-->
+   <div class="conent">
+      <div class="conent1 margAuto">
+	        <div  class="conleft">
+			        <h3>系列分类</h3>
+					<ul>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+						<li><a href="">美食订餐一</a><i>&gt;</i></li>
+					</ul>
+			</div>
+			
+			<div  class="conright swiper-container" style="background:#DAA520;">
+			       <div class="swiper-wrapper">
+		               <div class="swiper-slide"><img src="img/da1.png"/></div>
+			           <div class="swiper-slide"><img src="img/da2.png"/></div>
+			           <div class="swiper-slide"><img src="img/da3.png"/></div>
+				       <div class="swiper-slide"><img src="img/da4.png"/></div>
+			           <div class="swiper-slide"><img src="img/da5.png"/></div>
+			           <div class="swiper-slide"><img src="img/da6.png"/></div>
+		          </div>
+				  <!--分页器可以写在container外面，类型:字符串或者html元素，默认null-->
+		         <div class="swiper-pagination"></div>
+		 
+		        <!--前后按钮-->
+		        <div class="swiper-button-prev  swiper-button-white"></div>
+		       <div class="swiper-button-next swiper-button-black"></div>
+			           
+			</div>
+			
+	  </div>
+
+	  <div class="conent2 margAuto">
+	       <a><img src="imgms/conent2.jpg" alt="美食图" width=1050;/></a>
+	  </div>
+
+	  <div class="conent3 margAuto"> 
+	      <div class="conleft3">
+		    <h3>美食大全</h3>
+			 <ul>
+			   <li><i id="yel">1</i><a href="goumai/goumai.html">特色美食</a><li>
+			   <li><i id="yel">2</i><a href="goumai/goumai.html">黎平腌鱼</a><li>
+			   <li><i id="yel">3</i><a href="goumai/goumai.html">独山盐酸</a><li>
+			   <li><i>4</i><a href="goumai/goumai.html">霉豆腐</a><li>
+			   <li><i>5</i><a>都匀毛尖</a><li>
+			   <li><i>6</i><a>特色美食</a><li>
+			   <li><i>7</i><a>特色美食</a><li>
+			   <li><i>8</i><a>特色美食</a><li>
+			   <li><i>9</i><a>特色美食</a><li>
+			 </ul>
+		  </div>
+		  
+	<!--客服固定定位-->
+	       <div style="position:fixed;top:300px;left:45px;width:100px;height:100px;">
+		    <a href="kefu/jidong.html"> <img src="imgms/kf.jpg"  alt='美食客服' style="border-radius:8px;"/></a>
+		   </div>
+	 <!-- -->
+		  <div class="conright3 ">
+		      <h3>特价产品</h3>
+			  <ul class="clearfix">
+			     <li>
+				    <a href="goumai/goumai.html" class="png1"><img src="imgms/1.png" alt="干锅"/></a><br>
+					<a href="goumai/goumai.html">品类:<span>干锅</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png1"><img src="imgms/2.png" alt="猫饭子"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>卷粉</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png1"><img src="imgms/3.png" alt="猫饭子"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>猫饭子</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png1"><img src="imgms/4.png" alt="紫心红薯"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>紫心红薯</span></a>
+				 </li>
+			  </ul>
+
+			  <ul class="clearfix">
+			     <li>
+				    <a href="goumai/goumai.html" class="png2"><img src="imgms/5.png" alt="独山盐酸"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>独山盐酸</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png2"><img src="imgms/6.png" alt="黎平腌鱼"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>黎平腌鱼</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png2"><img src="imgms/7.png" alt="都匀冲糕"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>都匀冲糕</span></a>
+				 </li>
+				 <li>
+				    <a href="goumai/goumai.html" class="png2"><img src="imgms/8.png" alt="米豆腐"/></a><br>
+					<a href="goumai/goumai.html">种类:<span>米豆腐</span></a>
+				 </li>
+			  </ul>
+              <div class="tubleft"></div>
+			  <div class="tubright"></div>
+		  </div>
+	  </div>
+	  
+      
+	   <div class="conent4 margAuto">
+	    <a><img src="imgms/conent4.png" alt="美食"></a>
+	   </div>
+
+	   <div class="conent5 margAuto">
+	      
+	         <div class="con5left">
+			    <h3 style="background:#00cc99;text-indent:24px;">特价产品</h3>
+				<div class="clearfix con5left1">
+				    <p style="background:#66ffcc;"><span style="">排行榜</span><span>美食</span></p>
+						<dl>
+							<dt>
+								<a href="">
+									<img src="imgms/view11.png" alt="">
+								</a>
+							</dt>
+							<dd><a href="">贵州都匀特色</a></dd>
+					</dl>
+					<dl>
+							<dt>
+								<a href="">
+									<img src="imgms/view22.png" alt="">
+								</a>
+							</dt>
+							<dd><a href="">贵州独山特色</a></dd>
+					</dl>
+
+					<dl>
+							<dt>
+								<a href="">
+									<img src="imgms/view33.png" alt="">
+								</a>
+							</dt>
+							<dd><a href="">贵州凯里特色</a></dd>
+					</dl>
+					<dl>
+							<dt>
+								<a href="">
+									<img src="imgms/view44.png" alt="">
+								</a>
+							</dt>
+							<dd><a href="">贵州苗寨特色</a></dd>
+					</dl>
+					
+				</div>
+			 </div>
+			 <div class="con5con">
+			    <h3>美食要闻<span style="float:right;">更多&gt;&gt;</span></h3>
+			    <ul>
+				   <li><a>产品信息A</a></li>
+				   <li><a>产品信息B</a></li>
+				   <li><a>产品信息C</a></li>
+				   <li><a>产品信息D</a></li>
+				   <li><a>产品信息E</a></li>
+				   <li><a>产品信息</a></li>
+				   <li><a>产品信息</a></li>
+				   <li><a>产品信息</a></li>
+				   <li><a>产品信息</a></li>
+				</ul>
+			 </div>
+			 <div class="con5right">
+			   <h3>地图搜索</h3>
+			   <a href="ditu/ditu.html"><img src="imgms/vedio1.png" alt="地理位置"/></a>
+			 </div>
+	   </div>
+    </div>
+<!--coent end-->
+
+
+   <!--footer start-->
+            <div class="foot">
+			     <div  class="foot1 clearfix">
+			           <div class="foot11 margAuto">
+				            <div class="foot1left">
+							     <ul>
+								     <li class="xx">代理加盟</li>
+									 <li>22</li>
+									 <li>322</li>
+									 <li>422</li>
+									 
+								 </ul>
+                              
+								 <ul>
+								     <li class="xx">支付方式</li>
+									 <li>微信</li>
+									 <li>支付宝</li>
+									 <li>银联</li>
+									 
+								 </ul>
+								  
+
+								 <ul>
+								     <li class="xx">关于我们</li>
+									 <li>2222</li>
+									 <li>322</li>
+									 <li>422</li>
+									 
+								 </ul>
+								 
+								 <ul>
+								     <li class="xx">联系我们</li>
+									 <li>QQ</li>
+									 <li>phone</li>
+									 <li>Email</li>
+									 
+								 </ul>
+
+								  <ul>
+								     <li class="xx">我们动态</li>
+									 <li>2222</li>
+									 <li>322</li>
+									 <li>422</li>
+									 
+								 </ul>
+								 
+								 <ul>
+								     <li class="xx">最新活动</li>
+									 <li>2222</li>
+									 <li>322</li>
+									 <li>422</li>
+									 
+								 </ul>
+							</div>
+						    <div class="foot1right">
+							      <dl>
+								     <dt><img src="imgms/erwei1.png"></dt>
+									 <dd>我的二维码</dd>
+								  </dl>
+								  <p>微博:
+								      <a><img src="imgms/sina.png"></a>
+									  <a><img src="imgms/ten.png"></a>
+								  </p>
+							</div>
+				      </div>
+				 </div>
+
+
+				 <div class="foot2">
+				      <p>工信部备案许可证：黔ICP备2021003735号 ||  183057642qq@sina.cn 特产商城版权所有<p>
+					  <a><img src="imgms/beian.png"><span>经营性网站备案信息</span></a>
+					  <img src="imgms/bel.png"/>
+				 </div>
+			</div>
+
+  </div>
+  
+  
+  <script type="text/javascript" src="Swiper/swiper.min.js"></script>
+<script>
+   var myswiper = Swiper('.swiper-container',{
+         /*必需有第一项，autoplay*/
+	    autoplay:2000,/* 1:逗号结尾，自动切换，毫秒,水平滑动的*/
+
+		initialSlide:3,/* 2:设置初始化slide(第几张开始),类型:数字,0开始*/
+		
+		//direction:'vertical', /* 3: 滑动方向，水平，垂直，horizontal,vertical,默认是水平*/
+        
+		speed:1000, /* 4: 滑动的速度，开始到结束的时间，类型:数字，默认:300 配合autoplay,必需有autoplay*/
+        
+	     autoplayDisabledOninteraction:false,
+			/*
+			5:用户操作swiper,是否禁止autoplay
+			操作:触碰 拖动 点击 (分页)
+			默认是true  可选的值false,默认是true(不动)  可选的值false（还是动的）,及是鼠标上下拉动的时候页面本身也在动，
+			*/
+		     //autoplayStopOnLast:true,
+		             /* 6: 切换到最后一张停止停止自动切换
+		             有 loop时无效，两个只能要一个,默认:false不停,true停止*/
+			
+		      loop:true,/* 7: 无缝隙及无限循环1到6,6到1，而不是6拉回1的感觉*/
+		 
+		 grabCursor:true, /* 8: 鼠标放到上面是形状，覆盖时的手，拖到时是抓手，可选：true,false,默认:false没有抓手*/
+  
+        
+		freeMode:true,  /*  9:滑动距离，可选值：true,false,true是滑动不满一格不动,滑动多少动多少*/
+		 
+		 /*很少用的*/
+		 //slidesPerView:6,
+		//centeredSlides:true,
+		/* 10:slides grid网格布局可选值true (居中)false(居左)*/
+		
+		effect:'cube', /*11：取值：fade(淡入)，(方块),coverflow(3d流),flip(翻转)，默认:slide(滑动)*/
+		
+		
+		pagination:'.swiper-pagination',/*分页器*/
+		/* 12：fee分页器和lopp一起使用会出现抖动*/
+		
+		/*12:前后按钮*/
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		
+ })
+   //setInterval("mySwiper.slidePrev()",2000);/*反向6到着到1,不设置也是一样的*/
+</script>
+ </body>
+</html>

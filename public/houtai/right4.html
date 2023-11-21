@@ -1,0 +1,104 @@
+
+<head>
+<link href="images/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<style>
+  table,table tr td { color:#000; font-size:13px; font-family:"宋体";}
+  a{color:#000;text-decoration:none; font-size:15px;}
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  
+      <tr>
+        <td height="31"><div class="titlebt">反馈意见管理</div></td>
+      </tr>
+   </table></td>
+  </tr>
+  <tr>
+
+    <td valign="top" bgcolor="#F7F8F9">
+<table width="98%"cellspacing="1" cellpadding="1" bgcolor="#EFEFEF"  style="margin-left:1%; margin-top:15px;">
+<tr>
+  <td width="75%" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;padding-left:15px;">栏目分类</td><td width="20%" align="center" bgcolor="#f8f8f8" style="height:40px; font-weight:bold;"></td></tr>
+<tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>李老三：15664279565</td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=1' type='button'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>&nbsp;&nbsp;<img src='images/tree_line1.gif'></img>菜质量太差，快递太慢，</td><td width='10%' bgcolor='#FFFFFF' align='center'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>&nbsp;&nbsp;&nbsp;<img src='images/tree_line1.gif'></img></td><td width='10%' bgcolor='#FFFFFF' align='center'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>王老大：1235648795</td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=4' type='button'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>&nbsp;&nbsp;<img src='images/tree_line1.gif'></img>商家服务态度太慢喽，分量有点少</td><td width='10%' bgcolor='#FFFFFF' align='center'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>吴老慢：1564895656</td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=7' type='button'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>&nbsp;&nbsp;<img src='images/tree_line1.gif'></img>口味不太正宗，快递服务不好</td><td width='10%' bgcolor='#FFFFFF' align='center'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'></td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=9' type='button'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>疯志豪：1564976565</td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=10' type='button'>
+					</tr><tr>
+					<td width='75%' bgcolor='#FFFFFF' style='padding-left:15px;height:35px;'>&nbsp;&nbsp;<img src='images/tree_line1.gif'></img>商家服务不好，差评</td><td width='10%' bgcolor='#FFFFFF' align='center'><a href='addregion.php?type=add&id=11' type='button'>
+					</tr></table>
+<p></p>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="51%" class="left_txt">服务邮箱：avast@qq.com<br>
+          官方网站：http://</td>
+        <td width="7%">&nbsp;</td>
+        <td width="40%">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td background="images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+   
+  </tr>
+</table>
+</body>
+</html>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+	function btnclick(name,id)
+	{
+		var name=name;
+		var id = id;
+		if(name=='delete')
+		{
+			if(window.confirm("你确定删除本条信息么?"))
+			{
+			$.post("ajax/ajax.php?act=region",{id:id},function(date){
+				if(date==1)
+				{
+					window.location.href="region.php";
+					return true;
+				}
+				else if(date==0)
+				{
+					alert("请删除分类下的子类！");
+					return false;
+				}
+				else 
+				{
+					alert("删除失败！");
+					return false;
+				}
+			});
+			}
+			else
+			{
+				return false;	
+			}
+		}
+		else
+		{
+			window.location.href="addregion.php?type="+name+"&id="+id+"";
+		}
+	 }
+</script>

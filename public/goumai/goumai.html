@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   
+
+/* CSS Document */
+	body{
+		background:#FFFFFF; 
+		font-size:12px; 
+		font-family:Arial, Helvetica, sans-serif;
+		color:#666;
+		}
+
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p,a{
+			margin:0; padding:0; border:none; 
+			list-style-type:none;text-decoration:none; 
+			font-family:Arial, Helvetica, sans-serif;
+			color:#666666;}
+	.blank{
+		height:8px; 
+		line-height:8px; 
+		clear:both; 
+		visibility:hidden;
+		}
+	.block {
+		width:1200px;
+		height:auto;
+		margin:0 auto;	
+		}
+	a.index_ck {
+		margin-top:40px;
+		float:right;
+		margin-right:20px;
+		}
+	a.nus {
+		width:23px;
+		height:25px;
+		display:block;
+		float:left;
+		}
+	span.red {
+		color:#F00;
+	}
+span.orange {
+		font-size:20px;color:#F60;}
+/* -------top样式 --------*/
+	#top {
+		width:100%;
+		height:30px;
+		background:#F7F7F7;
+		border-bottom:1px solid #EEEEEE;
+		line-height:30px;
+		color:#666666;
+		}
+	#top_region {
+		font-weight:bold;
+		float:left;font-size:13px;
+		} 
+	#top_region span a{
+					color:#F00;
+					font-weight:normal;
+					font-size:12px;
+					}
+	#top_right {
+				float:right;
+				}
+	#top_right li {
+				float:left;
+				} 
+	#top_right li a {
+				margin-left:5px;
+				margin-right:5px;
+				} 
+	#top_right li a:hover {
+				color:#ef0d0f;
+				}
+	#top_right img {
+				vertical-align: middle;
+				margin-right:3px;
+				}
+/*--------header样式-------*/
+	.header {
+			width:1200px;
+			height:60px;
+			margin-top:30px;
+			}
+	#logo {
+			width:233px;
+			height:51px;
+			float:left;
+			}
+	#search {
+			width:360px;
+			height:35px;
+			padding-left:160px;
+			padding-top:10px;
+			float:left;
+			}
+	#search_input {
+			width:281px;
+			height:32px;
+			background:url(images/s_1.jpg) no-repeat;
+			float:left;
+			}
+	#search_input input {
+			outline:medium none;
+			height:24px;
+			margin-top:1px;
+			margin-left:1px;
+		
+			}
+	#search_button {
+			width:77px;
+			height:32px;
+			margin-left:
+			281px;
+			}
+	#header_right {
+			width:384px;
+			height:51px;
+			float:right;
+			background:url(images/s_3.jpg) no-repeat;
+			}
+	#menu {
+			width:100%;
+			height:35px;
+			background:#C8000B;
+			}
+.menu_nav  a{
+			color:#FFFFFF;
+			float:left;
+			display:block;
+			padding-left:30px;
+			padding-right:30px;
+			font-size:15px;font-weight:
+			bold;line-height:35px;
+			}
+.menu_nav  a:hover {
+			background:#eb1610;
+			}
+a.menu_nav_right {
+			float:right;
+			}
+/*---------index中间样式(西餐 自助 火锅区)--------*/
+.col-1 {
+			width:1200px;
+			height:auto;
+			display:table;
+			}
+.col-1_header {
+			width:532px;
+			height:80px;
+			background:url(images/food.jpg) center no-repeat;
+			margin:auto;
+			}
+.box_food {
+			width:278px;
+			height:295px;
+			border:1px solid #E9E9E9;
+			float:left;
+			}
+.box_food_dc {
+			margin:10px 0 0 10px;
+			float:left;
+			}
+.box_food_dc h1{
+			font-size:14px;
+			line-height:30px;
+			}
+.box_food_dc p {
+			width:120px;
+			line-height:20px;
+			}
+.box_food_dc img {
+			float:right;
+			}
+.col-2 {
+		width:1200px;
+		height:auto;
+		display:table;
+		}
+.col-2_header {
+		width:532px;
+		height:80px;
+		background:url(images/ye.jpg) center no-repeat;
+		margin:auto;}
+.box_night {
+		width:375px;
+		height:340px;
+		border:1px solid #E9E9E9;
+		float:left;
+		}
+.box_night_dc {
+		margin:10px 0 0 10px;
+		float:left;
+		}
+.box_night_dc h1 {
+		font-size:14px;
+		line-height:30px;
+		}
+.box_night_dc p {
+		width:180px;
+		line-height:20px;
+		}
+/*--------------底部样式------------------*/
+.img_sell {
+		width:1200px;
+		height:156px;
+		margin-top:20px;
+		}
+.help {
+		width:1200px;
+		height:100px;
+		margin-top:30px;
+		margin-bottom:20px;
+		}
+.help_li {
+		width:150px;
+		height:auto;
+		margin-left:75px;
+		float:left;
+		}
+.help_li li.dt {
+		font-weight:bold;
+		font-size:13px;
+		line-height:30px;
+		}
+.help_li li.dt img {
+		float:left;
+		}
+.help_li li.dd {
+		margin-left:33px;
+		list-style:square;
+		height:18px;
+		}
+.help_li li.dd a:hover {
+		color:#C8000B;
+		}
+.menu_bottom {
+		width:100%;
+		height:30px;
+		background:#393939;
+		text-align:center;
+		color:#FFFFFF;
+		font-size:13px;
+		}
+.menu_bottom a {
+		line-height:30px;
+		color:#FFFFFF;
+		padding-left:30px;
+		padding-right:30px;
+		}
+.menu_bottom a:hover {
+		color:#C8000B;
+		}
+
+#footer {
+		text-align:center;
+		background:#F0F0F0;
+		line-height:25px;
+		padding-top:25px;
+		padding-bottom:30px;
+		color:#343434;}
+/*-----------------------西餐样式--------------------------*/
+.lmzy {
+		width:100%;
+		<!--height:310px;-->
+		text-align:center;
+		margin:auto;
+		
+		}
+.lmzy img {
+		width:100%;
+		
+		}
+
+.lmzy_bg {
+		width:100%;
+		height:auto; 
+		background:url(images/jhdr_01.jpg) no-repeat #FFFFFF;
+		background-position:top center;
+		display:table;
+		}
+.category {
+		width:1200px;
+		height:50px;
+		margin:auto;
+		line-height:45px;
+		text-align:center;
+		font-size:30px;
+		font-family:"华文行楷";
+		color:#FFFFFF;
+		}
+.category span {
+			font-size:14px;
+			font-family:"宋体";
+			color:#FFFFFF;
+			font-weight:bold;
+			}
+.category span a{
+			font-size:14px;
+			font-family:"宋体";
+			color:#FFFFFF;
+			font-weight:bold;
+			}
+.category span a:hover {
+			color:#FFCE00;
+			}
+.goods_list {
+			width:1180px;
+			background:#F67055;
+			height:auto;
+			padding:10px 10px 10px 10px;
+			margin:auto;
+			display:table;
+			}
+.goods_box {
+			width:365px;
+			height:300px;
+			background:#FFFFFF;
+			margin:13px;
+			float:left;
+			}
+.goods_box img {
+			margin-left:5px;
+			margin-top:5px;
+			}
+.goods_box_left {
+			float:left;
+			margin-top:8px;
+			margin-left:5px;
+			}
+.goods_box_left h1 {
+			font-size:14px;
+			line-height:23px;
+			}
+.goods_box_right {
+			float:right;
+			font-size:25px;
+			font-family:"微软雅黑";
+			font-weight:bold;
+			color:#e6393b;
+			margin-top:10px;
+			margin-right:15px;
+			}
+/*--------------------------help页面------------------------------------*/
+.user_content_help {
+			width: 220px;
+			height: auto;
+			float: left;
+			}
+.user_content_help li.help_lis {
+			width:220px;
+			height:37px;background:url(images/help_lm_top_bg.jpg) no-repeat;
+			font-weight:bold;
+			font-size:15px;
+			line-height:37px;
+			text-indent:3em;
+			}
+.user_content_help li.help_liss {
+			width:220px;
+			height:37px;
+			background:url(images/lm_fl_bg.jpg) no-repeat;
+			font-size:15px;
+			line-height:37px; 
+			text-indent:3em;
+			}
+.user_content_help li.help_lissa {
+			width:220px;
+			height:37px;
+			background:url(images/help_lm_bg.jpg) no-repeat;
+			font-size:15px;
+			line-height:37px; 
+			text-indent:3em;
+			}
+.user_content_help_content {
+			width: 770px;
+			height: auto;
+			float: right;
+			border: 1px solid #CCC;
+			border-top:none;
+			}
+.user_content_help_content_h {
+			width:770px;
+			height:35px;
+			background:url(images/bookc01.gif) repeat-x;
+			line-height:35px;text-indent:2em;
+			font-size:13px;}
+.user_content_help_content_c {
+				padding:15px;
+				}
+/*--------------------------city城市-----------------------------*/
+.city {
+		margin-top:30px;
+		}
+.city span {
+			float:left;
+			font-size:14px;
+			text-indent:1em;
+			}
+.city a {
+		width:120px;
+		height:40px;
+		line-height:40px;
+		display:block;
+		float:left;t
+		ext-align:center;
+		font-size:14px;}
+
+
+@charset "utf-8";
+
+.flexslider{
+			position:relative;
+			height:400px;
+			overflow:hidden;
+			background:url(images/loading.gif) 50% no-repeat;
+			}
+.slides{
+			position:relative;
+			z-index:1;
+			}
+.slides li{
+		height:400px;
+		}
+.flex-control-nav{
+			position:absolute;
+			bottom:10px;
+			z-index:2;
+			width:100%;
+			text-align:center;
+			}
+.flex-control-nav li{
+			display:inline-block;
+			width:14px;
+			height:14px;
+			margin:0 5px;*display:inline;
+			zoom:1;
+			}
+.flex-control-nava{
+			display:inline-block;
+			width:14px;
+			height:14px;
+			line-height:40px;
+			overflow:hidden;
+			background:url(images/dot.png) right 0 no-repeat;
+			cursor:pointer;
+			}
+.flex-control-nav .flex-active{
+				background-position:0 0;
+				}
+.flex-direction-nav{
+				position:absolute;
+				z-index:3;
+				width:100%;
+				top:45%;
+				}
+.flex-direction-nav li a{
+				display:block;
+				width:50px;
+				height:50px;
+				overflow:hidden;
+				cursor:pointer;
+				position:absolute;
+				}
+.flex-direction-nav li a.flex-prev{
+			left:40px;
+			background:url(images/prev.png) center center no-repeat;
+			}
+.flex-direction-nav li a.flex-next{
+			right:40px;
+			background:url(images/next.png) center center no-repeat;
+			}
+ .cate {
+		width:1200px;
+		height:50px;
+		margin:auto;
+		line-height:45px;
+		text-align:center;
+		font-size:30px;
+		font-family:"华文行楷";
+		color:#FFFFFF;
+		background-color:#e6393b;
+		}
+
+
+</style>
+<title>火锅特色</title>	
+</head>
+<body>
+
+<div id="top"><div class="block">
+	<div id="top_region">地区 
+	<span><a href=''>[可切换地区]</a></span>
+	</div>
+           <ul id="top_right">
+		   <!--<li><a href="index">美食美客首页</a>|</li>-->
+		   <li><a href="col_show"><img src="images/tb_1.jpg" width="12" height="12"/>收藏夹</a>|</li>
+		   <li><a href="cart"><img src="images/tb_2.jpg" width="21" height="14" />购物车</a>|
+		   <li><a href=''>订单查询</a>|</li>
+		   <li><a href="#">联系我们</a>&nbsp;&nbsp;
+		   <!-- <a href='login'>【登录】</a>-->
+		   <!-- <a href='regist'>【注册】</a>-->
+		   </li>
+		   </li>
+		  </ul>
+    </div>
+</div>
+<div class="header block">
+
+<!-- 表单请求-->
+<form action="" method="get">
+	<div id="logo">
+		<a href="index"><img src="images/logo.jpg" width="237" height="51" /></a>
+	</div>
+		
+		<div id="search">
+		<div id="search_input"><input type="text" name="key" size="35" value="" /></div>
+    		<div id="search_button"><input  type="image" value="" src="images/s_2.jpg" /></div>
+      </div>
+</form>
+		<div id="header_right"></div>
+</div>
+		<div id="menu">
+			<div class="menu_nav block">
+			<a href="../index.html">首页</a>
+			<a href="">小吃</a>
+			<a href="">麻辣</a>
+			<a href=" ">节日特惠</a>
+			<a href="# ">自助餐</a>
+			<a href="">我的购物车</a>
+	 </div>
+</div>
+<div class="lmzy">
+ <img src="images/d.jpg">
+ </div>
+ <div class="lmzy_bg">
+ <div class="cate">美味食城
+       (<span>
+       <a>火锅小店</a>.
+       
+       <a>小吃都店</a>.
+       <a >特殊之店</a>)
+       </span>
+    </div>
+    <div class="goods_list">
+	  <div class="goods_box">
+				<a href="#">
+				<img src="images/21.png" width="354" height="238">
+				</a>
+			<div class="goods_box_left">
+				<h1>
+				  <a href="#">贵州米豆腐
+				  </a>
+				</h1>
+				  <p>发的身份的说法都是第三方都是第三方<b>￥6.00</b></p>
+				  <a style="margin: 0px -7px 0px -5px;background-color: #28E448;
+    font-size: 26px;
+    padding: 0px 123px 0px 138px;" href="../zhifu/zf.html">立即购买</a>
+            </div>
+	   </div>
+	 <p style="color:rgba(33, 24, 111, 0.68); font-size:20px;"> <br/><br/><br/>
+	 <br/>特色凉拌
+	 <br/>辣椒，花椒，粮油
+	 <br/>品质独特套餐，建议两以上人订购，有赠品
+	 <br/> 送餐具 包物流 
+	 <br/>储藏方法：冷冻<br/>
+	 
+      </p>
+	  
+	</div>	 
+
+</div>
+	
+	<div class="img_sell block">
+	<a href="#">
+	<img src="images/o3.jpg" width="1200" height="156">
+	</a>
+   </div>
+	   
+
+<!-- 西餐 -->
+	<div class="WesFood">
+	</div>
+	
+<!-- 火锅 -->
+	<div class="fireFood"></div>
+<!-- 自助区 -->
+	<div class="self-help"></div>
+	
+<!-- 导航区 -->
+<form action="regist_check type=regist" name="form" method="post" onsubmit="return check_name();">
+<div class="border_box block">
+		 <table width="480" border="0" align="center" id="user_type" style="display:none;">
+			 <tr>
+				 <td width="120">所属城市：</td>
+				<td width="308">
+				<select name="region">
+    				<option value='1'  >贵阳</option><option value='2'>&nbsp;花溪区</option>
+					<option value='4'  >南明区</option>
+					<option value='6'  >&nbsp;云岩</option>
+					<option value='7'  >金阳区</option>
+					<option value='8'  >&nbsp;</option>
+					<option value='9'  >乌当区</option>    
+				</select>
+			</td>
+  </tr>
+  <tr>
+    <td>商家类型：</td>
+    <td>
+		<select name="cat_id">
+    		
+				<option value='1' >西餐</option>
+				<option value='2' >名店小吃</option>
+			<option value='3' >节日特惠</option>    
+		</select>
+	</td>
+  </tr>
+</table>
+
+</div>
+</form>
+
+<div class="help block">
+	<div class="help_li">
+     		<li class="dt"><img src="images/help_1.jpg" width="28" height="28" />新手指南</li>
+			<li class='dd'><a href='help f_id=1&id=6'>用户注册</a></li>
+			<li class='dd'><a href='help f_id=1&id=7'>订餐流程</a></li>
+			<li class='dd'><a href='help f_id=1&id=8'>网站导航</a></li>
+			<li class='dd'><a href='help f_id=1&id=9'>帮助中心</a></li>    
+	</div>
+
+	<div class="help_li">
+     		<li class="dt"><img src="images/help_2.jpg" width="28" height="28" />支付方式</li>
+			<li class='dd'><a href='help f_id=2&id=10'>在线支付</a></li>
+			<li class='dd'><a href='help f_id=2&id=11'>餐到付款</a></li> 
+			    
+	</div>
+
+    <div class="help_li">
+     		<li class="dt"><img src="images/help_3.jpg" width="28" height="28" />配送方式</li>
+			<li class='dd'><a href='help f_id=3&id=12'>配送说明</a></li>
+			<li class='dd'><a href='help f_id=3&id=13'>运送说明</a></li>
+			<li class='dd'><a href='help f_id=3&id=14'>订单签收</a></li>
+	</div> 
+	
+    <div class="help_li">
+     		<li class="dt"><img src="images/help_4.jpg" width="28" height="28" />售后服务</li>
+			<li class='dd'><a href='help f_id=4&id=15'>服务热线</a></li>
+			<li class='dd'><a href='help f_id=4&id=16'>退换说明</a></li>    
+	</div> 
+	
+
+    <div class="help_li">
+     		<li class="dt"><img src="images/help_5.jpg" width="28" height="28" />关于我们</li>
+			<li class='dd'><a href='help f_id=5&id=17'>关于商城</a></li>
+			<li class='dd'><a href='help f_id=5&id=18'>诚聘英才</a></li>
+			<li class='dd'><a href='help f_id=5&id=19'>联系我们</a></li>   
+	</div>
+</div>
+
+<div class="menu_bottom">
+		<a href="index ">首页</a>|
+		<a href="#">西餐</a>|
+		
+		<a href="#">火锅</a>|
+		
+		<a href="#">名店小吃</a>|<a href="#">节日特惠</a>|
+		<a href="#">我的购物车</a>
+</div>
+
+<div id="footer">
+		emil：|183057642qq@sina.cn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 南明区省府路</br> 黔ICP备2021003735号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright 2016-2021  版权所有 </br>   
+		<img src="images/shangbiao.jpg" width="497" height="51" />
+</div>
+<ul>
+		
+	 
+</body>
+</html>

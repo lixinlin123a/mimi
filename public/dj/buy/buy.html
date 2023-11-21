@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+  
+    <style type="text/css">
+    	body{
+    background:#f5f5f5;
+}
+	.jd_container{
+	    min-width:300px;/*配置小屏幕设备，为了保持布局正常*/
+	    max-width:640px;/*在行业中 设计图一般都是640px;如果不设置那么图片就会被拉伸，页面效果就很差*/
+	    margin:0 auto;
+	    position:relative;
+	    background:pink;
+	    height:800px;
+	}
+ 
+ 
+     
+     .Img_Message{
+        width: 100%;
+        height: 430px;
+        border: 1px solid red;
+    }
+       
+       .Ipone_Message{
+        width: 100%;
+        height: 165px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        }
+
+       .Ipone_Message div{
+        display: inline-block;
+       }
+       .Ipone_Message .data{
+         width: 100px;
+         height: 30px;
+         border: 1px solid #fff;
+         text-align: center;
+         line-height: 20px;
+       }
+      .box2{
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        line-height: 50px;
+        font-size: 30px;
+        right: 0;
+        text-align: right;
+        
+      }  
+
+      .box3{
+       width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        line-height: 50px;
+        font-size: 25px;
+        text-align: center;
+        background-color: #13f161;
+        
+      }
+	  .listDiv{
+	
+        height: 35px;
+        line-height: 35px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #f2fb1b;
+		border-radius:5px;
+	  
+	  }
+	  
+    </style>
+
+    <script src="jquery-2.1.4.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="jd_container">
+
+       <div class="left Img_Message">
+           <img src="" alt="" style="width: 100%; height: 430px;">
+       </div>
+       <div class="right Ipone_Message">
+            
+
+
+             <div class="tapic">
+                  <div class="title">显示版本:</div>
+                  <div class="data" labelName="version">1</div>
+                    <!--labelName:自定义属性 名字一定要和下面的属性名一致-->
+             </div>
+
+             <div class="tapic">
+                  <div class="title">网络类型:</div>
+                  <div class="data" labelName="network">2</div>
+             </div>
+
+             <div class="tapic">
+                  <div class="title">机身颜色:</div>
+                  <div class="data" labelName="color">3</div>
+             </div>
+
+             <div class="tapic">
+                  <div class="title">套餐类型:</div>
+                  <div class="data" labelName="combo">4</div>
+             </div>
+
+             <div class="tapic">
+                  <div class="title">内存大小:</div>
+                  <div class="data" labelName="memory">5</div>
+             </div>
+                           
+             <div class="tapic">
+                  <div class="title">数量多少:</div>
+                  <input type="text" name="" value="" class="data">件
+                  
+             </div>
+
+             <div class="tapic listDiv" >
+                  <div class="addCart">加入购物车</div>
+                
+             </div>
+       </div>
+       
+
+
+
+	  <div class="box2">
+	    购物车商品数量:<strong id="Shop_Number">0</strong>件
+
+	  </div>
+
+	  <div class="box3" style="">
+	       立即购买
+
+	  </div>
+    </div>
+</body>
+</html>
+<script>
+        //在後面添加jq，可以不用入口函數
+       // $("#Ipone_Message").css("background","red");
+
+
+     //ipone 的屬性
+
+     var ipone={
+            //设置属性
+        
+         version:"合约6s plus",
+         network:"移动2G3G4G",
+         color:"金色",
+         combo:"官方标配",
+         memory:"62GB",
+        imgSrc:"img/6plus.jpg",
+        
+     };
+
+     //购物车属性 是页面 的 不是手机的
+     var cart={
+        productCount:0,//屬性值，沒有或者有
+     };
+
+     //頁面對象具有的方法
+     var productInto={
+
+            init:function(){//頁面加載显示的方法
+              //綁定dom元素
+              this.bindDom();//productInto.bindDOM();
+              //綁定事件
+              this.bindEvents();//productInto.bindEvents();
+
+             },
+
+              //綁定dom元素-获得元素，属性的访问
+              /*
+                 用来将对象数据显现在页面中
+                 */
+             bindDom:function(){
+
+                 
+                  //第1种做法,用for ..in来做
+                              //for... in用来遍历对象
+
+                    for(var k in ipone){//k:是属性名，ipone：是对象名
+
+                        if(k!="imgSrc"){ //防止图片赋值给其他
+                         
+                           // ipone[k]：//获得属性值
+                       $(".Ipone_Message .data[labelName="+k+"]").html(ipone[k]);
+
+                         }
+                       // $(".right .data[labelName="+k+"]").html(ipone[k]);
+
+                    }
+                    
+                     $(".Img_Message img").attr("src",ipone.imgSrc);
+
+
+              //第2种做法，一般的做法
+             
+              /*  //绑定ipone对象的imgSrc属性
+                             //attr();属性相关的设置
+                             //$("").attr("属性","属性值")
+                             //$("").attr("value","dd");//属性设置
+                             //$("").attr("type","text");//属性设置
+                             //attr(“src”);获得属性
+                             //attr(“src”，“1.jpg”);设置背景图片属性
+
+                       $(".left img").attr("src",ipone.imgSrc);
+                     //$(".data[labelName=version]"):属性选择器的用法
+                       $(".right .data[labelName=version]").html(ipone.version);
+                       $(".right .data[labelName=network]").html(ipone.network);
+                       $(".right .data[labelName=color]").html(ipone.color);
+                       $(".right .data[labelName=combo]").html(ipone.combo);
+             */
+
+             },
+             //綁定事件
+             bindEvents:function(){
+              //绑定购物车按钮click事件
+
+               $(".Ipone_Message .addCart").click(function(){
+
+                            //$下面(".box2 strong")是dom元素获取了两次。消耗性能
+                          var $CartCount=$(".box2 strong");
+                
+                    //1，先要获取需要购买的iphone数量
+                       var count=  $(".tapic input").val();////结果是字符串
+                           count=parseInt(count);//先转为数字
+
+                          if(isNaN(count)){ //如果count是非数字
+                              count=0;
+                          }  
+                        
+                    //2,获取购物车已有的商品数量
+                       var cartCount=$CartCount.html();//结果是字符串
+                        // alert(typeof cartCount);//string
+                         cartCount=parseInt(cartCount);////先转为数字
+
+                    //3,更新购物车商品数量
+                 
+                       cartCount+=count;
+                       // cartCount=cartCount+count;
+                        $CartCount.html(cartCount);
+
+
+                     //4，加入后，清空购买的iphone数量
+                        $(".tapic input").val("");   
+
+               });
+
+             },  
+
+           addCart:function (){ //动态加如购物车 
+
+          
+
+             },
+
+
+     };
+
+        
+ productInto.init();//对象的方法调用
+  
+    
+    
+
+
+</script>
